@@ -5,6 +5,8 @@ import {
 import Main from "../layout/main/Main";
 import Allproduct from "../pages/allProduct/Allproduct";
 import ProductDetails from "../pages/productDetails/ProductDetails";
+import SignIn from "../pages/authentication/signIn/SignIn";
+import SignUp from "../pages/authentication/signUp/signUp";
 
   const router = createBrowserRouter([
     {
@@ -17,8 +19,16 @@ import ProductDetails from "../pages/productDetails/ProductDetails";
       {
         path:"/products/:id",
         element:<ProductDetails></ProductDetails>,
-        loader:({params}) => fetch(`http://localhost:3000/products/${params.id}`)
+        loader:({params}) => fetch(`https://sore-jade-alligator-ring.cyclic.app/products/${params.id}`)
       },
+      {
+        path:'/signIn',
+        element:<SignIn></SignIn>
+      },
+      {
+        path:'/signUp',
+        element:<SignUp></SignUp>
+      }
     ]
   }
     

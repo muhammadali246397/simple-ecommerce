@@ -4,7 +4,7 @@ import ProductCard from '../productCard/ProductCard';
 const Allproduct = () => {
     const [data, setData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:3000/products')
+        fetch('https://sore-jade-alligator-ring.cyclic.app/products')
             .then(res => res.json())
             .then(data => setData(data))
     }, [])
