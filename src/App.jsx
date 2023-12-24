@@ -1,5 +1,5 @@
 import React from 'react';
-import Allproduct from './components/home/allProduct/Allproduct';
+import Allproduct from './components/pages/allProduct/Allproduct';
 
 const App = () => {
   return (
